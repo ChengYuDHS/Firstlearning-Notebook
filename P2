@@ -1,0 +1,93 @@
+#define _CRT_SECURE_NO_WARNINGS 1 //必须加载第一行
+#define max 10
+
+enum Sex
+{
+	MALE,
+	FEMALE,
+	SECRET
+};
+
+#  include <stdio.h>;
+#  include <string.h>;
+
+
+int Add(int x, int y)
+{
+	int z = x + y;
+	return z;
+}
+
+
+int main() {
+	//常量
+
+	//字面常量，即数字
+	3.1415926;
+	//const 修饰的常变量，是变量，只是具有常属性
+	const int num = 4;
+	//井号定义的标识符常量
+	int arrr[max] = { 0 };
+	//枚举常量
+	enum Sex s = MALE;
+
+	//字符串
+	char arr1[] = "abc";
+	char arr2[] = { 'a', 'b', 'c', '\0' };//'\0'的值是0，表示字符串结束。ascii编码
+	printf("%s\n", arr1);
+	printf("%s\n", arr2);
+
+	printf("%d\n", strlen(arr1));//3
+	printf("%d\n", strlen(arr2));//3
+
+	//转义字符	\n换行	\t水平制表符 \ddd \xdd
+
+	printf("%d\n",strlen("c:\test\32\test.c"));//13,\32表示32作为八进制代表的那个十进制数字，对应的ascii编码
+	printf("%c\n",'\132');//z
+
+	//if 语句
+	int input;
+	printf("今天喝水了吗");
+	scanf("%d", &input);
+	if (input == 1)
+	{
+		printf("niuer\n");
+	}
+	else 
+	{
+		printf("去喝水\n");
+	}
+		
+
+	//循环语句 while, for, do...while三种循环
+
+	int line = 0;
+
+	while (line < 5)
+	{
+		printf("敲代码%d\n",line);
+		line++;
+	}
+	printf("可以敲明天的代码了\n");
+
+	//函数,分为库函数与自定义函数，这里的Add就是自定义函数
+	int sum = Add(1, 2);
+	printf("the sum is %d\n", sum);
+
+	//数组
+	int arr[10] = {1,2,3,4,5,6,7,8,9,10};//定义了一个存储10个数字的数组，下标默认从0开始
+	printf("%d\n", arr[4]);
+
+	//操作符 
+	//算数操作符		/取商，%取模
+	//移位操作符	<<左移，移二进制位,>>右移		b = a<<2,b相对于a，左移两位
+	//位操作符，与门，或门，异或门等
+
+
+
+
+
+
+
+	return 0;
+}
