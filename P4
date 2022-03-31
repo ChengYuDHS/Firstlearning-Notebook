@@ -1,0 +1,36 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+#include <string.h>
+
+int main (){
+	
+	//printf("%d\n",strlen("c:\test\121"));//7
+	
+	// sizeof 出来的单位是字节
+	
+	//~按二进制位取反
+	//int a = 0;
+	//int b = ~a;
+	//printf("%d\n", b);//-1,负数在内存中是二进制的补码
+
+	//++
+	//int a = 10;
+	//int b = a++;//后置++，先赋值，a再加1
+	//int c = ++a;//前置++， a先加一，再赋值
+	//printf("a = %d, b = %d, c = %d\n", a, b, c);//12 10 12
+
+	//操作符 (类型) 强制类型转换
+	//int a = (int)3.14;
+	//printf("a = %d\n", a);
+
+	//逻辑与 &&		 逻辑或 ||		零为假，非零为真
+
+	//三目操作符 条件操作符 exp1 ? exp2 : exp3	若表达式1为真，则执行2，否则3
+	//int a = 10;	int b = 20;	int max;
+	//max = a >= b ? a : b;
+	//printf("%d\n", max);//20
+
+	// time -> 1:25:45
+
+	return 0;
+}
