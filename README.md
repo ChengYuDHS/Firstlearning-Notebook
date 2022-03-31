@@ -1,2 +1,2 @@
 # Firstlearning-Notebook
-some code and note of c language learning
+some code and notes of c language learning from bilibili vedio, BV1q54y1q79w
