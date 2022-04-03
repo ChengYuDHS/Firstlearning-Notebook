@@ -30,7 +30,42 @@ int main (){
 	//max = a >= b ? a : b;
 	//printf("%d\n", max);//20
 
-	// time -> 1:25:45
 
+	//原码反码与补码
+	//只要是整数，内存中储存的就是二进制补码，原码安进制变换得到，原码符号位不变，其他位取反得到反码，反码加一的带补码
+
+	//关键字
+	//auto 一般都是省略掉的 break case continue default extern goto 等等 register寄存器关键字 访问速度：寄存器》高速缓存》内存》硬盘
+	//register int a = 10;//建议把a定义成寄存器变量
+	//signed/unsigned 定义符号与非符号数（非负）	struct 结构体 union 共用体 typedef类型定义 stactic
+	//typedef unsigned int u_int;
+	//u_int num = 2;
+
+	//static 修饰局部变量，其生命周期变长 
+	//int i = 0;
+	//while (i < 5)
+	//{
+	//	test();
+	//	i++;
+	//}
+	//static 修饰全局变量，其作用域发生变化，让静态全局变量只能在其所在源文件内部使用，除了源文件就无法使用
+	//extern int g;
+	//printf("g = %d\n", g);
+	//static修饰函数，改变了函数的连接属性，由外部链接属性改为内部链接属性
+	//int a = 10;
+	//int b = 20;
+	//int z = ADD(a, b);
+	//printf("%d\n", z);
+
+	//#define可以定义标识符常量，也可以定义宏
+	//int a = 10;
+	//int b = 20;
+	//int z = MAX(a, b);//宏的使用，代码会被替换为 z = (a>b?a:b)
+	//printf("%d\n", z);
+
+	//指针
+	
+	
+	
 	return 0;
 }
