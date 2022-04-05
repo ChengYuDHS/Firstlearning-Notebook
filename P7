@@ -1,0 +1,92 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+
+
+int main ()
+{
+	//C语言是一种结构化的语言：1.顺序结构2.选择结构3.循环结构。分支语句 if，switch; 循环语句 for，while，do while
+	//语句，分号隔离每一个语句
+	// 
+	//分支语句 if
+	//对于执行语句为单句，可以不用代码块
+	//int age = 40;
+	//if (age < 18)
+	//{
+	//	printf("未成年\n");
+	//}
+	//else if (age >= 18 && age < 20)
+	//{
+	//	printf("青年\n");
+	//}
+	//else if(age>=28 && age<50)
+	//{
+	//	printf("壮年\n");
+	//}
+	//else
+	//{
+	//	printf("老年\n");
+	//}
+	//若要执行多条语句，则需要使用代码块{}，还是使用代码块的好
+	//悬空else：else与最近的，未匹配的if组合形成语句
+
+	//NOTE: 写变量与常量判断相等的条件，把常量写在前面，如5 == num
+
+	//int i = 1;
+	//while (i <= 10)
+	//{
+	//	//if (1 == i % 2)
+	//	//{
+	//	//	printf("%d\n", i);
+	//	//}
+	//	//i++;
+
+	//	printf("%d\n", i);
+	//	i += 2;
+	//}
+
+	//分支语句 switch
+	//switch 语句的条件的整型，case后面是整型常量,case后面不一定要加break,但最后一句要加break
+	//int day = 10;
+	//scanf("%d", &day);
+	//switch (day)
+	//{
+	//case 1:
+	//case 2:
+	//case 3:
+	//case 4:
+	//case 5:
+	//	printf("工作日\n");
+	//	break;
+	//case 6:
+	//case 7:
+	//	printf("休息日\n");
+	//	break;
+	//default:
+	//	printf("invalid input");
+	//	break;
+	//}
+
+
+	//循环语句while,与其中break结束当前循环；continue终止本次循环中continue后面的代码，回到while的判断语句
+	//int i = 0;
+	//while (i <= 10)
+	//{
+	//	i++;
+	//	if (5 == i)
+	//	{
+	//		printf("the output is 5\n");
+	//		continue;
+	//	}
+	//	printf("%d\n", i);
+	//}
+
+	//getchar获取字符转换成ASII码 and putchar转换int为字符
+	//int ch = 0;
+	//while ((ch = getchar()) != EOF)//ctrl + z表示EOF
+	//{
+	//	putchar(ch);
+	//}
+
+
+	return 0;
+}
