@@ -1,0 +1,65 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+
+
+int main ()
+{
+	//while 语句
+	//int ch = 0;
+	//while ((ch = getchar()) != EOF)//前面的灯饰要用括号括起来
+	//{
+	//	putchar(ch);
+	//}
+	
+	//char password[20] = { 0 };
+	//int ret = 0;
+	//int ch;
+	//printf("please input your password\n");
+	//scanf("%s", &password);
+	//printf("please confirm(Y/N)\n");
+	//while ((ch = getchar()) != '\n') //输入之前清空输入缓冲区，直到\n被读取走
+	//	;
+	//{	
+	//}
+	//ret = getchar();
+	//if (ret == 'Y')
+	//{
+	//	printf("confirm successfully\n");
+	//}
+	//else
+	//{
+	//	printf("give in confirming\n");
+	//}
+
+	//只输出数字字符
+	//int ch = 0;
+	//while ((ch = getchar()) != EOF)
+	//{
+	//	if (ch < '0' || ch > '9')
+	//	{
+	//		continue;
+	//	}
+	//	putchar(ch);
+	//}
+	 
+	//for 循环,分号隔开	赋值；判断；调整语句。i是局部变量
+	//for (int i = 1; i <= 10; i++)
+	//{
+	//	if (i == 5)
+	//	{
+	//		continue;
+	//	}
+	//	printf("%d\n", i);
+	//}
+
+	//1h
+
+
+
+
+
+
+
+
+	return 0;
+}
