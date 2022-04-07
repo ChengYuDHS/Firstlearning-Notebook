@@ -51,9 +51,48 @@ int main ()
 	//	}
 	//	printf("%d\n", i);
 	//}
+	//不可以在for循环内部改变循环变量，防止循环发生错误。且写成前闭后开的区间
+	//for循环的初始化，调整，判断部分都可以省略；若判断省略，则恒为真。不过除非很熟练，不要随便省略
+	//for (;;)
+	//{
+	//	printf("hehe\n");
+	//}
 
-	//1h
+	//do while循环，while后面加分号
+	//int i = 0;
+	//do
+	//{
+	//	if (i == 5)
+	//	{
+	//		continue;
+	//	}
+	//	printf("%d\n", i);
+	//	i++;
+	//} 
+	//while (i < 10);
 
+	//practice
+	//1. 计算n的阶乘
+	//int n;
+	//int t = 1;
+	//printf("input an integer n:\n");
+	//scanf("%d", &n);
+	//getchar();
+	//for (int i = 0; i < n; i++)
+	//{
+	//	t = t * (i + 1);
+	//}
+	//printf("the jiecheng of n is %d\n", t);
+
+	//计算1-10阶乘之和 1 2 6 24
+	//int t = 1;
+	//int s = 0;
+	//for (int i = 0; i < 4; i++)
+	//{
+	//	t = t * (i + 1);
+	//	s = s + t;
+	//}
+	//printf("the sum is %d\n", s);//简化到只用一层循环，且运用之前结果减少阶乘运算量
 
 
 
