@@ -94,7 +94,70 @@ int main ()
 	//}
 	//printf("the sum is %d\n", s);//简化到只用一层循环，且运用之前结果减少阶乘运算量
 
+	//从有序数组中找到某个数k，二分法，左端序号和右边序号作为查找的依据
+	//int arr[10] = { 0,1,2,3,4,5,7,8,9 };
+	//int k = 6;
+	//int sz = sizeof(arr) / sizeof(arr[0]);
+	//int left = 0;
+	//int right = sz - 1;
+	//while (left <= right)
+	//{
+	//	int mid = (left + right) / 2;
+	//	if (arr[mid] > k)
+	//	{
+	//		right = mid - 1;
+	//	}
+	//	else if (arr[mid] < k)
+	//	{
+	//		left = mid + 1;
+	//	}
+	//	else
+	//	{
+	//		printf("here is k in the arr, the index is %d\n", mid);
+	//		break;
+	//	}
+	//}
+	//if (left > right)
+	//{
+	//	printf("there is no k in the arr\n");
+	//}
 
+	//打印渐变字符串
+	//char arr1[] = "wlcome to bit!!!!!!";
+	//char arr2[] = "###################";
+	//int left = 0;
+	//int right = strlen(arr1) - 1;
+	//while (left <= right)
+	//{
+	//	arr2[left] = arr1[left];
+	//	arr2[right] = arr1[right];
+	//	printf("%s\n", arr2);
+	//	Sleep(1000);//休息一秒
+	//	system("cls");//清空屏幕
+	//	left++;
+	//	right--;
+	//}
+	//printf("%s\n", arr2);
+
+	//输入三次密码
+	//char password[50] = { 0 };
+	//int i = 0;
+	//for (i = 0; i < 3; i++)
+	//{
+	//	scanf("%s", &password);
+	//	if (strcmp("123456", password) == 0)//比较两个字符串是否相同
+	//	{
+	//		printf("log in succesfully\n");
+	//	}
+	//	else
+	//	{
+	//		printf("wrong password\n");
+	//	}
+	//}
+	//if (i == 3)
+	//{
+	//	printf("please confirm your password\n");
+	//}
 
 
 
