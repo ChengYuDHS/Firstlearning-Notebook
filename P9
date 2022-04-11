@@ -2,6 +2,32 @@
 #include<stdio.h>
 #include<math.h>
 
+void menu() {
+	printf("**********************************\n");
+	printf("******* 1. PLAY     0. EXIT ******\n");
+	printf("**********************************\n");
+}
+
+void game() {
+	int guess = 1;
+	int r = rand() % 99 + 1;//生成1-100的随机数
+	while (1) {
+		printf("please guess\n");
+		scanf("%d", &guess);
+		if (guess < r) {
+			printf("bigger\n");
+		}
+		else if (guess > r) {
+			printf("smaller\n");
+		}
+		else {
+			printf("congratulations! The number is %d\n", guess);
+			break;
+		}
+	}
+}
+
+
 int main ()
 {
 	//求最大公约数，辗转相除法
@@ -41,6 +67,41 @@ int main ()
 	//	sign = -sign;
 	//}
 	//printf("the sum is %lf\n", sum);
+
+	//在屏幕上写99乘法表
+	//for (int i = 1; i <= 9; i++) {
+	//	for(int j = 1; j <= i; j++) {
+	//		printf("%d*%d = %-2d  ", i, j, i*j);//%2d,输出两位数且是右对齐，%-2d是左对齐
+	//	}
+	//	printf("\n");
+	//}
+
+	//猜字游戏
+	//int input = 0;
+	//srand(time(NULL));//用时间戳设置随机数的起点
+	//do
+	//{
+	//	menu();
+	//	printf("Please choose\n");
+	//	scanf("%d", &input);
+	//	switch (input) {
+	//	case 1:
+	//		game();
+	//		break;
+	//	case 0:
+	//		printf("exit");
+	//		break;
+	//	default: 
+	//		printf("invalid input\n");
+	//	}
+	//} while (input);
+
+	//goto 语句
+	//可用于多层嵌套
+again:
+	printf("hello\n");
+	goto again;
+
 
 
 
