@@ -1,0 +1,65 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+#include<string.h>
+
+void Add(int a, int b) {
+	int sum;
+	sum = a + b;
+	printf("the sum is %d\n", sum);
+}
+
+int get_max(int a, int b) {
+	if (a > b) {
+		return a;
+	}
+	else {
+		return b;
+	}
+}
+
+void Swap1(int a, int b) {
+	int tmp = 0;
+	tmp = a;
+	a = b;
+	b = tmp;
+}
+
+void Swap2(int* pa, int* pb) {
+	int tmp = 0;
+	tmp = *pa;
+	*pa = *pb;
+	*pb = tmp;
+}
+
+int main ()
+{
+	//库函数，C语言本身提供的函数。还有字符串操作函数，字符操作函数，内存操作函数，时间日期函数，数学函数等等
+	//char arr1[] = "bit";
+	//char arr2[20] = "####";
+	//strcpy(arr2, arr1);//\0也会拷贝
+	//printf("%s\n%s\n", arr1, arr2);
+	//printf("%d\n", strlen(arr2));
+	
+	//menset
+	//char arr[] = "hello world";
+	//memset(arr, '#', 5);//需要修改的数据，想改变的量，需要修改数据的位数
+	//printf("%s\n", arr);
+
+	//比大小
+	//int a = 10;
+	//int b = 20;
+	//int max = get_max(a, b);
+	//printf("the max number is %d\n", max);
+
+	//交换数值，函数要返回值和指针才能改变主函数的值
+	//int a = 10;
+	//int b = 20;
+	//printf("a = %d	b = %d\n", a, b);
+	//Swap1(a, b);
+	//printf("a = %d	b = %d\n", a, b);
+	//Swap2(&a, &b);
+	//printf("a = %d	b = %d\n", a, b);
+
+
+	return 0;
+}
