@@ -1,6 +1,9 @@
 #define _CRT_SECURE_NO_WARNINGS 1 
 #include<stdio.h>
 #include<string.h>
+#include<math.h>
+
+#include"binary_search.h"//头文件引用
 
 void Add(int a, int b) {
 	int sum;
@@ -29,6 +32,22 @@ void Swap2(int* pa, int* pb) {
 	tmp = *pa;
 	*pa = *pb;
 	*pb = tmp;
+}
+
+int is_prime(int x) {
+	for (int i = 2; i <= sqrt(x); i++) {
+		if(x%i == 0){
+			return 0;//return的作用比break强，返回值并跳出循环
+		}
+	}
+	return 1;
+}
+
+//函数声明
+int binary_search(int arr[], int k, int length);
+
+void Addone(int* p) {
+	(*p) ++;//++的优先级比较高，用括号括起来就行
 }
 
 int main ()
@@ -60,6 +79,49 @@ int main ()
 	//Swap2(&a, &b);
 	//printf("a = %d	b = %d\n", a, b);
 
+	//实际参数与形式参数。当实参传给形参时，形参时实参的一种拷贝，此时修改形参不会改变实参
+	//传值调用：函数的形参和实参占有不同的内存空间，改变形参不会改变实参
+	//传址调用：吧函数外部创建的变量的内存地址传递给函数参数的调用方式，可以在函数内部操作函数外部的值
+
+	//写一个函数判断一个数是不是素数
+	//int n = 0;
+	//int j = 0;
+	//scanf("%d", &n);
+	//j = is_prime(n);
+	//if (j == 1) {
+	//	printf("it is a real prime number\n");
+	//}
+	//else {
+	//	printf("your number is not a prime number\n");
+	//}
+
+	//二分查找函数
+	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i = 0;
+	int k = 10;
+	int length = sizeof(arr) / sizeof(int);
+	i = binary_search(arr, k, length);
+	if (i == -1) {
+		printf("the number you find is not in the arr\n");
+	}
+	else {
+		printf("the index of the number your find is %d\n", i);
+	}
+
+	//指针操作
+	//int num = 1;
+	//Addone(&num);
+	//printf("%d\n", num);
+
+	//函数嵌套：一个函数调用另一个函数
+
+	//链式访问：把一个函数的返回值作为另一个函数的输入参数
+	//printf("%d", printf("%d", printf("%d", 43)));//4321
+	//printf 返回值是打印字符的个数
+
+	//头文件，源文件与代码分工与封装
 
 	return 0;
 }
+
+//函数定义
