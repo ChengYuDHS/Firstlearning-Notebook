@@ -1,0 +1,74 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+int count = 0;
+
+int Facl(int n)
+{
+	int ret = 1;
+	for (int i = 1; i <= n; i++)
+	{
+		ret *= i;
+	}
+	return ret;
+}
+
+int Fac(int n)
+{
+	if (n <= 1)
+	{
+		return 1;
+	}
+	else
+	{
+		return n * Fac(n - 1);
+	}
+}
+
+int Fib(int n)
+{
+	if (n == 3)
+	{
+		count++;
+	}
+	if (n <= 2)
+	{
+		return 1;
+	}
+	else
+	{
+		return Fib(n - 1) + Fib(n - 2);//计算次数是2^n次, 用递归就不适合了
+	}
+}
+
+int Fib1(int n)//用循环的方式解决
+{
+	int a = 1;
+	int b = 1;
+	int c = 1;
+	while (n > 2)
+	{
+		c = a + b;
+		a = b;
+		b = c;
+		n--;
+	}
+	return c;
+}
+
+int main ()
+{
+	//递归与迭代
+	// 算阶乘
+	//int n;
+	//scanf("%d", &n);
+	//printf("%d\n", Fac(n));
+
+	//斐波那契数列
+	int n;
+	scanf("%d", &n);
+	printf("%d\n", Fib(n));
+	printf("%d\n", count);
+
+
+	return 0;
+}
