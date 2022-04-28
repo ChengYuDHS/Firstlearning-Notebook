@@ -1,0 +1,55 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+#include<string.h>
+
+int main ()
+{
+	//数组：一组辆同类型元素的组合
+	//数组创建：类型 数组名 个数，注意个数必须用常量表示
+	//int arr[10];
+	//数组初始化
+	//int arr[10] = {1, 2, 3};//不完全初始化，剩下的元素默认为0
+	//char arr2[5] = {'a', 'b', 'c'};//单引号的不带\0
+	//char arr4[] = "abcdef";//双引号的字符串自带\0
+	//printf("%d\n", sizeof(arr4));//计算arr4所占空间的大小。单位是字节
+	//printf("%d\n", strlen(arr4));//计算字符串长度，到\0截止。且只针对字符串求长度
+	//printf("%d\n", sizeof(char));
+	//打印字符串数组
+	//for (int i = 0; i < 6; i++)
+	//{
+	//	printf("%c ", arr4[i]);
+	//}
+	//整形数组的大小
+	//int arr[5] = {1, 2, 3, 4, 5};
+	//int sz = sizeof(arr) / sizeof(int);
+	//printf("%d\n", sz);
+	//for (int i = 0; i < sz; i++)
+	//{
+	//	printf("&arr[%d] = %p\n",i,  &arr[i]);//数组在内存中是连续存放的。且地址加4，指针加1
+	//}
+
+	//二维数组
+	//int arr[3][4] = { {1, 2, 3}, {4, 5} };
+	int arr[3][4] = {1, 2, 3, 4, 5};//行，列
+	//二维数组的行可以省略，但是列不行
+	for (int i = 0; i < 3; i++)
+	{
+		for (int j = 0; j < 4; j++)
+		{
+			printf("&arr[%d][%d] = %p\n",i, j, &arr[i][j]);
+		}
+	}
+	//二维数组在内存中是行接着行存放的
+
+
+
+
+
+
+
+
+
+
+	
+	return 0;
+}
