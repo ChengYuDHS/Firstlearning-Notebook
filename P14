@@ -1,0 +1,49 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+
+void bubble_sort(int arr[], int sz)
+{
+	//冒泡排序：两两相邻的元素比较.10个元素，九趟排序，每趟九次
+	for (int i = 0; i < sz-1; i++)
+	{	
+		int flag = 1;//假设本趟排序有序
+		for (int j = 0; j < sz - i- 1; j++)
+		{
+			if (arr[j] > arr[j + 1])//保证把最大的元素放在最后
+			{
+				int tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+				flag = 0;
+			}
+		}
+		if (flag == 1)
+		{
+			break;
+		}
+	}
+}
+
+int main ()
+{
+	//数组作为函数参数,升序排列数组。直接对数组传参，实际传过去的是数组首元素的地址，&arr[0]。在函数中对数组的操作可以直接实现
+	int arr[] = { 8,7,6,5,4,1,2,9,3,0 };
+	int sz = sizeof(arr) / sizeof(int);
+	//bubble_sort(arr, sz);
+	//for (int i = 0; i < sz; i++)
+	//{
+	//	printf("%d ", arr[i]);
+	//}
+	printf("%p\n", arr);//首元素地址
+	printf("%p\n", arr+1);
+	printf("%p\n", &arr[0]);//和上式一样
+	printf("%p\n", &arr[0]+1);
+	printf("%d\n", *arr);//输出首元素值
+	printf("\n");
+	printf("%p\n", &arr);//整个数组的地址
+	printf("%p\n", &arr+1);//比上一个大数组大小*4
+	//除以下两种情况，所有的数组名都表示数组首元素的地址
+	//1. sizeof(数组名)，计算整个数组的大小
+	//2. &数组名，取出的是整个数组的地址，数组名表示整个数组
+	return 0;
+}
