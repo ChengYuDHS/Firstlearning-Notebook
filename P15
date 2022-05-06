@@ -1,0 +1,115 @@
+game.h
+
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+
+#define ROW 3
+#define COL 3
+
+//声明函数
+void IniBoard(char board[ROW][COL], int row, int col);
+
+void DisplayBoard(char board[ROW][COL], int row, int col);
+
+
+game.c
+
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include "game.h"
+
+void IniBoard(char board[ROW][COL], int row, int col)
+{
+	for (int i = 0; i< row; i++)
+	{
+		for (int j = 0; j < col; j++)
+		{
+			board[i][j] = ' ';
+		}
+	}
+}
+
+void DisplayBoard(char board[ROW][COL], int row, int col)
+{
+	for (int i = 0; i < row; i++)
+	{
+		//打印数据
+		for (int j = 0; j < col; j++)
+		{
+			printf(" %c ", board[i][j]);
+			if (j != col - 1)
+			{
+				printf("|");
+			}
+		}
+		printf("\n");
+		if (i != row - 1)
+		{
+			for (int j = 0; j < col; j++)
+			{
+				printf("---");
+				if (j != col - 1)
+				{
+					printf("|");
+				}
+
+			}
+		}
+		printf("\n");
+	}
+}
+
+test.c
+
+
+
+#include "game.h"
+
+void menu()
+{
+	printf("***********************************\n");
+	printf("*****1. play*********0. exit*******\n");
+	printf("***********************************\n");
+}
+
+//游戏算法的实现
+void game()
+{
+	char board[ROW][COL] = {'a'};//存放信息
+
+	IniBoard(board, ROW, COL);//初始化棋盘
+
+	DisplayBoard(board, ROW, COL);//打印棋盘
+}
+
+
+void test()
+{
+	do
+	{
+		int input = 0;
+		menu();
+		printf("please choose:>\n");
+		scanf("%d", &input);
+		switch (input)
+		{
+		case 1:
+			printf("start\n");
+			game();
+			break;
+		case 0:
+			printf("close\n");
+			break;
+		default:
+			printf("invalid input\n");
+			break;
+		}
+	} while (1);
+}
+
+int main()
+{
+	test();
+
+
+	return 0;
+}
