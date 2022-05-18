@@ -1,0 +1,55 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+
+
+int main ()
+{
+	//单目操作符
+	short s = 0;
+	int a = 0;
+	printf("%d\n", sizeof(s = a + 5));//short类型字节2
+	printf("%d\n", s);//0？ sizeof里的表达式是不会真正运算的
+
+	//按位取反 ~，符号位也要变
+	printf("%d\n", ~a);
+	a = 11;
+	//把第三位改成1
+	a = a | (1 << 2);
+	printf("%d\n", a);
+
+	//把第三位搞成0
+	a = a & (~(1 << 2));
+	printf("%d\n", a);
+
+	a = 10;
+	printf("%d\n", a++);//10，后置：先用再加
+	a = 10;
+	printf("%d\n", ++a);//11，前置，先加后用
+
+	//数据类型转换
+	a = (int)3.14;
+
+	//关系操作符
+	//大于等于小于判断相等
+
+	//逻辑操作符，逻辑与和逻辑或
+	a = 3;
+	int b = 0;
+	int c = a && b;
+	printf("%d\n", c);
+
+	a = 0; b = 2; c = 3;
+	int i = 0,  d = 4;
+	i = a++ && ++b && d++;//逻辑与，当有0值输入时，后面的逻辑就不再计算且输出0。逻辑或，有真输入时，不再计算后面的逻辑，且输出1。
+	printf("%d %d %d %d\n", a, b, c, d);
+
+	//条件操作符，逗号表达式
+	//exp1 ? exp2 : exp3; 若exp1为真，执行exp2；若exp1为假，执行exp3
+	int max = (a > b ? a : b);
+	printf("%d\n", max);
+
+
+
+
+	return 0;
+}
