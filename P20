@@ -1,6 +1,12 @@
 #define _CRT_SECURE_NO_WARNINGS 1 
 #include<stdio.h>
 
+struct Stu
+{
+	char name[20];
+	int age;
+	char id[20];
+};
 
 int main ()
 {
@@ -47,6 +53,50 @@ int main ()
 	//exp1 ? exp2 : exp3; 若exp1为真，执行exp2；若exp1为假，执行exp3
 	int max = (a > b ? a : b);
 	printf("%d\n", max);
+
+	//逗号表达式，依次执行，输出最后的表达式
+	a = 1;
+	b = 3;
+	c = (a > b, a=b+10, a, b = a + 1);
+	printf("%d\n", c);
+
+	//下标引用操作符[]，函数调用操作符()，
+
+	//创建结构体类型 struct Stu，使用该类型创建学生变量s1
+	struct Stu s1 = { "San Zhang", 20, "1234567" };
+	//结构体 . 成员名
+	printf("%s\n", s1.name);
+	printf("%d\n", s1.age);
+	printf("%s\n", s1.id);
+	struct Stu* ps = &s1;
+	printf("%s\n", (*ps).name);
+	printf("%d\n", (*ps).age);
+	printf("%s\n", (*ps).id);
+	//结构体指针 -> 成员名
+	printf("%s\n", ps->name);
+	printf("%d\n", ps->age);
+	printf("%s\n", ps->id);
+
+	//表达式的求值顺序是由操作符的优先级决定的，且部分需要类型转换
+	//整型提升：表达式中字符和短整型操作数在使用之前被转换为普通整形
+	char A = 3;
+	//00000000000000000000000000000011
+	//储存到char类型中，发生截断，为00000011
+	char B = 127;
+	//000000000000000000000000011111111
+	//发生截断，为011111111
+	char C = A + B;//10000010
+	//补位后，补码为：11111111111111111111111110000010，原码为-126
+	printf("%d\n", C);//-126
+
+	C = 1;
+	printf("%u\n", sizeof(C));//1
+	printf("%u\n", sizeof(+C));//4
+	printf("%u\n", sizeof(!C));//1
+
+	//复杂表达式的求值：优先级，结合性，是否控制求值顺序
+
+
 
 
 
