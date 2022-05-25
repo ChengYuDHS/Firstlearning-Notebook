@@ -1,0 +1,31 @@
+#define _CRT_SECURE_NO_WARNINGS 1 
+#include<stdio.h>
+
+
+int main ()
+{
+	//通过指针可以找到内存单元，即地址
+	int a = 10;
+	int* p = &a;//指针变量,存到指针中的值都按照地址来处理
+	//32位平台是4个字节，64位是8个字节存放地址
+	printf("%d\n", sizeof(char*));//4
+	printf("%d\n", sizeof(int*));//4
+	printf("%d\n", sizeof(double*));//4
+
+	//指针类型：指针进行解引用操作的时候，能访问的空间大小
+	//int*类型访问4个，char*类型访问1个字节，double*类型访问8个字节
+	a = 0x11223344;
+	p = &a;
+	char* pc = &a;
+	printf("%p\n", p);
+	printf("%p\n", p+1);//比上一个大4
+	printf("%p\n", pc);
+	printf("%p\n", pc + 1);//比上一个大1
+	//同时指针类型决定了指针走一步走多远，int*加4，char*加1，double*加8
+
+	//野指针——指针指向的位置是未知的
+	//局部变量不初始化，默认是随机值；局部指针变量，默认是随机值。指针越界访问也会导致野指针
+
+	
+	return 0;
+}
