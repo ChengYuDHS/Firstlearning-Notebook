@@ -13,14 +13,32 @@ int main ()
 
 	char ch[] = "bit";
 	printf("%d\n", strlen(ch));
-	return 0;
+	
 	//利用指针赋值数组
-	for (p = &arr[5]; p > &arr[0]; )
-	{
-		*--p = 0;
-	}
+	//for (p = &arr[5]; p > &arr[0]; )
+	//{
+	//	*--p = 0;
+	//}
 	//允许指向数组元素的指针与指向数组最后一个元素后面那个内存位置的指针进行比较，
 	//但是不允许与指向数组第一个元素前一个的内存位置的指针进行比较
 
-	//1:15：00
+	//数组名就代表数组首元素地址
+	//&数组名，表示整个数组的地址
+	//sizof + 数组名，表示整个数组的字节大小
+	printf("%p\n", arr);
+	printf("%p\n", arr + 1);//大4
+	printf("%p\n", &arr[0]);
+	printf("%p\n", &arr[0] + 1);//大4
+	printf("%p\n", &arr);
+	printf("%p\n", &arr + 1);//大20
+
+	//二级指针
+
+	int a = 5;
+	int* pa = &a;
+	int** ppa = &pa;//二级指针
+	printf("%d\n", **ppa);//5
+
+	//指针数组- 存放指针的数组
+	return 0;
 }
